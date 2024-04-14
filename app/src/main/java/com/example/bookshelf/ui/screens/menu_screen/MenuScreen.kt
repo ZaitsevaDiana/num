@@ -1,6 +1,5 @@
 package com.example.bookshelf.ui.screens.menu_screen
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
