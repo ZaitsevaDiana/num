@@ -13,6 +13,10 @@
     <string name="book_authors"><b>Authors:</b> %s</string>
     <string name="book_price"><b>Price:</b> %s</string>
 
+    <string name="change_theme">Change theme</string>
+    <string name="settings">Settings</string>
+    <string name="read_book">Read Book</string>
+
     <string name="btn_search">Search Google Library</string>
     <string name="btn_favorite">My Favorite Books</string>
     <string name="NoFavoriteBooksText">No Favorite Books.</string>

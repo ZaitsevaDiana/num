@@ -12,11 +12,14 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.bookshelf.R
 import com.example.bookshelf.model.Book
+import com.example.bookshelf.model.VolumeInfo
 import com.example.bookshelf.ui.screens.components.ErrorScreen
 import com.example.bookshelf.ui.screens.components.LoadingScreen
+import com.example.bookshelf.ui.theme.BookshelfTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -83,25 +86,24 @@ fun QueryScreen(
 }
 
 
-//// Notes: the reason we see the images as the are is because it is using the image placeholder in AsyncImage
-//@Preview(showBackground = true, showSystemUi = true)
-//@Composable
-//fun HomeScreenPreview() {
-//    BookshelfTheme {
-//        val mockData = List(10) {
-//            Book(
-//                "Lorem Ipsum - $it",
-//                volumeInfo = VolumeInfo(
-//                    title = "xxx $it",
-//                    description = "xxx $it",
-//                    imageLinks = null,
-//                )
-//            )
-//        }
-//        GridScreen(
-//            bookshelfList = mockData,
-//            modifier = Modifier,
-//            onDetailsClick = { }
-//        )
-//    }
-//}
+/*@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun HomeScreenPreview() {
+    BookshelfTheme {
+       val mockData = List(10) {
+            Book(
+               "Lorem Ipsum - $it",
+                volumeInfo = VolumeInfo(
+                   title = "xxx $it",
+                   description = "xxx $it",
+                  imageLinks = null,
+               )
+            )
+        }
+        GridScreen(
+            bookshelfList = mockData,
+            modifier = Modifier,
+            onDetailsClick = { }
+        )
+    }
+}*/

@@ -28,6 +28,7 @@ data class VolumeInfo(
     val authors: List<String>,
     val publisher: String,
     val publishedDate: String,
+
 ) {
     val allAuthorsx: String
         get() = allAuthors()
@@ -62,6 +63,7 @@ data class SaleInfo(
         get() = "${listPrice?.amount ?: "N/A"} ${listPrice?.currency ?: "N/A"}"
 
 }
+
 
 @Serializable
 data class ListPrice(

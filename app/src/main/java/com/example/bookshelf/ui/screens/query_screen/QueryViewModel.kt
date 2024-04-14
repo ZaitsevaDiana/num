@@ -1,5 +1,6 @@
 package com.example.bookshelf.ui.screens.query_screen
 
+import androidx.compose.foundation.text.ClickableText
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -9,6 +10,7 @@ import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.bookshelf.BookshelfApplication
+import com.example.bookshelf.R
 import com.example.bookshelf.data.BookshelfRepository
 import com.example.bookshelf.model.Book
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -85,6 +87,7 @@ class QueryViewModel(
             )
         }
     }
+
 
     fun getBooks(query: String = "") { //  "travel"
         updateSearchStarted(true)
