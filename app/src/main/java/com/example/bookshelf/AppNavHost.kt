@@ -2,10 +2,15 @@ package com.example.bookshelf
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.BlendMode.Companion.Screen
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.bookshelf.ui.screens.detail_screen.DetailScreen
 import com.example.bookshelf.ui.screens.detail_screen.DetailsViewModel
 import com.example.bookshelf.ui.screens.favorite_screen.FavoritesScreen
@@ -67,3 +72,4 @@ fun BookshelfNavHost(
         }
     }
 }
+

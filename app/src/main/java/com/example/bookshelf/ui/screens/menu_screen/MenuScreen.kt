@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.bookshelf.AppDestinations
 import com.example.bookshelf.R
 import com.example.bookshelf.ui.theme.BookshelfTheme
 import com.example.bookshelf.ui.theme.BookshelfThemeSettings
@@ -51,7 +52,7 @@ private fun LightDarkThemeItem(){
         Text(
             text = "Turn on the Dark Theme",
             style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
+            color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.6f),
             modifier = Modifier
                 .weight(1f)
                 .padding(start = 8.dp, top = 8.dp, end = 8.dp, bottom = 8.dp)
@@ -66,6 +67,18 @@ private fun LightDarkThemeItem(){
         )
     }
 }
+
+@Preview
+@Composable
+fun MenuScreenPreview() {
+    MenuScreen(
+        onSearchClick = {
+            AppDestinations.QueryScreen.name
+        },
+        onFavClick ={AppDestinations.FavoriteScreen.name}
+    )
+}
+
 @Preview
 @Composable
 fun LightDarkThemeItemPreview(){

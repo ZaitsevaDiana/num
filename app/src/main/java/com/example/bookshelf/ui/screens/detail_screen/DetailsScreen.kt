@@ -15,13 +15,18 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.bookshelf.R
 import com.example.bookshelf.model.Book
+import com.example.bookshelf.model.ListPrice
+import com.example.bookshelf.model.SaleInfo
+import com.example.bookshelf.model.VolumeInfo
 import com.example.bookshelf.ui.screens.components.ErrorScreen
 import com.example.bookshelf.ui.screens.components.LoadingScreen
+import com.example.bookshelf.ui.theme.BookshelfTheme
 
 @Composable
 fun DetailScreen(
@@ -162,33 +167,34 @@ fun BookDetails(book: Book) {
 
 
 //// Notes: the reason we see the images as the are is because it is using the image placeholder in AsyncImage
-//@Preview(showBackground = true, showSystemUi = true)
-//@Composable
-//fun DetailsScreenPreview() {
-//    BookshelfTheme {
-//        val mockData =
-//            Book(
-//                id = "123",
-//                volumeInfo = VolumeInfo(
-//                    title = "A book",
-//                    description = "Caniss ortum, tanquam bassus exemplar.",
-//                    publishedDate = "11/11/2011",
-//                    authors =  listOf("AAA","aaa"),
-//                    publisher = "John Carter",
-//                    subtitle = "Cunu litist",
-//                    imageLinks = null,
-//                ),
-//                saleInfo = SaleInfo(
-//                    country = "USA",
-//                    isEbook = false,
-//                    listPrice = ListPrice(
-//                        amount = 2.22f,
-//                        currency = "US Dollar"
-//                    )
-//                )
-//            )
-//        BookDetails(
-//            book = mockData,
-//        )
-//    }
-//}
+/*@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun DetailsScreenPreview() {
+    BookshelfTheme {
+    }
+        val mockData =
+            Book(
+                id = "123",
+                volumeInfo = VolumeInfo(
+                    title = "A book",
+                    description = "Caniss ortum, tanquam bassus exemplar.",
+                    publishedDate = "11/11/2011",
+                    authors =  listOf("AAA","aaa"),
+                    publisher = "John Carter",
+                    subtitle = "Cunu litist",
+                    imageLinks = null,
+                ),
+                saleInfo = SaleInfo(
+                    country = "USA",
+                    isEbook = false,
+                    listPrice = ListPrice(
+                        amount = 2.22f,
+                        currency = "US Dollar")
+                )
+            )
+        BookDetails(
+            book = mockData,
+        )
+    }
+}*/
+

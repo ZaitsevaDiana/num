@@ -14,7 +14,10 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.bookshelf.R
+import com.example.bookshelf.data.BookshelfRepository
 import com.example.bookshelf.model.Book
 import com.example.bookshelf.model.VolumeInfo
 import com.example.bookshelf.ui.screens.components.ErrorScreen
@@ -86,24 +89,16 @@ fun QueryScreen(
 }
 
 
-/*@Preview(showBackground = true, showSystemUi = true)
+/*@OptIn(ExperimentalMaterial3Api::class)
+@Preview
 @Composable
-fun HomeScreenPreview() {
-    BookshelfTheme {
-       val mockData = List(10) {
-            Book(
-               "Lorem Ipsum - $it",
-                volumeInfo = VolumeInfo(
-                   title = "xxx $it",
-                   description = "xxx $it",
-                  imageLinks = null,
-               )
-            )
-        }
-        GridScreen(
-            bookshelfList = mockData,
-            modifier = Modifier,
-            onDetailsClick = { }
-        )
-    }
+fun QueryScreenPreview() {
+
+    QueryScreen(
+        modifier = Modifier.fillMaxSize(),
+        viewModel = QueryViewModel(),
+        retryAction = { /* действие повтора */ },
+        onDetailsClick = { book -> /* действие при клике на детали книги */ }
+    )
 }*/
+
