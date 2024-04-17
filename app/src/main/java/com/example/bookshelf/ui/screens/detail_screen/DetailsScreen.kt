@@ -30,7 +30,6 @@ import com.example.bookshelf.ui.theme.BookshelfTheme
 
 @Composable
 fun DetailScreen(
-    modifier: Modifier = Modifier,
     viewModel: DetailsViewModel,
     retryAction: () -> Unit,
 ) {
@@ -88,17 +87,17 @@ fun BookDetails(book: Book) {
                 text = stringResource(R.string.book_subtitle, book.volumeInfo.subtitle),
                 style = MaterialTheme.typography.titleMedium
             )
-//            Spacer(modifier = Modifier.height(8.dp))
-//            Text(
-//                text = "publisher: " + book.volumeInfo.publisher,
-//                style = MaterialTheme.typography.titleMedium
-//            )
-//            Spacer(modifier = Modifier.height(8.dp))
-//            Text(
-//                text = "publishedDate: " + book.volumeInfo.publishedDate,
-//                style = MaterialTheme.typography.titleMedium
-//            )
-//            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "publisher: " + book.volumeInfo.publisher,
+               style = MaterialTheme.typography.titleMedium
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+               text = "publishedDate: " + book.volumeInfo.publishedDate,
+                style = MaterialTheme.typography.titleMedium
+            )
+            Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = stringResource(R.string.book_authors, book.volumeInfo.allAuthors()),
                 style = MaterialTheme.typography.titleMedium
@@ -114,19 +113,18 @@ fun BookDetails(book: Book) {
                 text = "country: " + book.saleInfo.country,
                 style = MaterialTheme.typography.titleMedium
             )
-//            Spacer(modifier = Modifier.height(8.dp))
-//            Text(
-//                text = "isEbook: " + book.saleInfo.isEbook,
-//                style = MaterialTheme.typography.titleMedium
-//            )
-
-//            Spacer(modifier = Modifier.height(8.dp))
-//            if (!book.getPrice().isEmpty()) {
-//                Text(
-//                    text = "listPrice: " + book.saleInfo.listPrice?.amount.toString() + " - " + book.saleInfo.listPrice?.currency,
-//                    style = MaterialTheme.typography.titleMedium
-//                )
-//            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "isEbook: " + book.saleInfo.isEbook,
+                style = MaterialTheme.typography.titleMedium
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            if (!book.getPrice().isEmpty()) {
+               Text(
+                    text = "listPrice: " + book.saleInfo.listPrice?.amount.toString() + " - " + book.saleInfo.listPrice?.currency,
+                    style = MaterialTheme.typography.titleMedium
+                )
+            }
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "listPrice: " + book.saleInfo.getPrice2,
@@ -134,11 +132,11 @@ fun BookDetails(book: Book) {
             )
 
 
-//            Spacer(modifier = Modifier.height(8.dp))
-//            Text(
-//                text = "description: " + book.description,
-//                style = MaterialTheme.typography.bodyMedium
-//            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "description: " + book.description,
+                style = MaterialTheme.typography.bodyMedium
+            )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "description: " + book.volumeInfo.description,
@@ -146,35 +144,35 @@ fun BookDetails(book: Book) {
             )
 
 
-//            Spacer(modifier = Modifier.height(8.dp))
-//            Text(
-//                text = "smallThumbnail: " + book.volumeInfo.imageLinks?.smallThumbnail,
-//                style = MaterialTheme.typography.titleMedium
-//            )
-//            Spacer(modifier = Modifier.height(8.dp))
-//            Text(
-//                text = "thumbnail: " + book.volumeInfo.imageLinks?.thumbnail,
-//                style = MaterialTheme.typography.titleMedium
-//            )
-//            Spacer(modifier = Modifier.height(8.dp))
-//            Text(
-//                text = "httpsThumbnail: " + book.volumeInfo.imageLinks?.httpsThumbnail,
-//                style = MaterialTheme.typography.titleMedium
-//            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "smallThumbnail: " + book.volumeInfo.imageLinks?.smallThumbnail,
+                style = MaterialTheme.typography.titleMedium
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "thumbnail: " + book.volumeInfo.imageLinks?.thumbnail,
+                style = MaterialTheme.typography.titleMedium
+            )
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = "httpsThumbnail: " + book.volumeInfo.imageLinks?.httpsThumbnail,
+                style = MaterialTheme.typography.titleMedium
+            )
         }
     }
 }
 
 
 //// Notes: the reason we see the images as the are is because it is using the image placeholder in AsyncImage
-/*@Preview(showBackground = true, showSystemUi = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun DetailsScreenPreview() {
-    BookshelfTheme {
-    }
+    BookshelfTheme {}
         val mockData =
             Book(
                 id = "123",
+                description ="",
                 volumeInfo = VolumeInfo(
                     title = "A book",
                     description = "Caniss ortum, tanquam bassus exemplar.",
@@ -195,6 +193,4 @@ fun DetailsScreenPreview() {
         BookDetails(
             book = mockData,
         )
-    }
-}*/
-
+}
