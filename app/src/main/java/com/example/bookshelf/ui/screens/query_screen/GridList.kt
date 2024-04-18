@@ -107,6 +107,7 @@ private fun GridItem(
                     //.border(1.dp, Color.Blue),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
+
                 // Notes: Question: I would like onFavoriteClick to be hoisted up.. all the way to QueryScreen
                 //  because I do not like passing the viewModel this far down.
                 //  I am not sure how to get this done. To me it seems that

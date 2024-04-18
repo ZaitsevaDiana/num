@@ -87,7 +87,7 @@ fun BookDetails(book: Book) {
                 text = stringResource(R.string.book_subtitle, book.volumeInfo.subtitle),
                 style = MaterialTheme.typography.titleMedium
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            /*Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "publisher: " + book.volumeInfo.publisher,
                style = MaterialTheme.typography.titleMedium
@@ -97,7 +97,7 @@ fun BookDetails(book: Book) {
                text = "publishedDate: " + book.volumeInfo.publishedDate,
                 style = MaterialTheme.typography.titleMedium
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(8.dp))*/
             Text(
                 text = stringResource(R.string.book_authors, book.volumeInfo.allAuthors()),
                 style = MaterialTheme.typography.titleMedium
@@ -113,7 +113,7 @@ fun BookDetails(book: Book) {
                 text = "country: " + book.saleInfo.country,
                 style = MaterialTheme.typography.titleMedium
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            /*Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "isEbook: " + book.saleInfo.isEbook,
                 style = MaterialTheme.typography.titleMedium
@@ -124,7 +124,7 @@ fun BookDetails(book: Book) {
                     text = "listPrice: " + book.saleInfo.listPrice?.amount.toString() + " - " + book.saleInfo.listPrice?.currency,
                     style = MaterialTheme.typography.titleMedium
                 )
-            }
+            }*/
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "listPrice: " + book.saleInfo.getPrice2,
@@ -132,11 +132,11 @@ fun BookDetails(book: Book) {
             )
 
 
-            Spacer(modifier = Modifier.height(8.dp))
+            /*Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "description: " + book.description,
                 style = MaterialTheme.typography.bodyMedium
-            )
+            )*/
             Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "description: " + book.volumeInfo.description,
@@ -144,7 +144,7 @@ fun BookDetails(book: Book) {
             )
 
 
-            Spacer(modifier = Modifier.height(8.dp))
+            /*Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = "smallThumbnail: " + book.volumeInfo.imageLinks?.smallThumbnail,
                 style = MaterialTheme.typography.titleMedium
@@ -158,7 +158,7 @@ fun BookDetails(book: Book) {
             Text(
                 text = "httpsThumbnail: " + book.volumeInfo.imageLinks?.httpsThumbnail,
                 style = MaterialTheme.typography.titleMedium
-            )
+            )*/
         }
     }
 }
